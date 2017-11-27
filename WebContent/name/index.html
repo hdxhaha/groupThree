@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>起一个好名字</title>
+
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+
+<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+</head>
+<body><script src="/demos/googlegg.js"></script>
+
+<center>
+	<div style="width:60%;height:auto;border:solid 1px ##eee;text-align:left;margin-top:20px;">
+		<!-- <img src="img/header.png" width="100%" height="90%"> -->
+		<div style="width:100%;height:auto;border:solid 2px #eee;border-radius:30px;text-align:left;padding:10px;">
+		 <a href="../index.html"><img src="../img/back.png" width="30px"></a><font color="#666" size="6px" style="margin-left:6px"> 好名字</font>
+		</div>
+<div class="zzsc-container">
+	
+	<form class="cd-form floating-labels" style="margin-top:-6px;">
+		<fieldset>
+			<legend>请填写宝宝资料</legend>
+
+			<div class="icon">
+				<label class="cd-label" for="cd-name">宝宝姓氏</label>
+				<input class="user" type="text" name="cd-name" id="cd-name" required>
+			</div> 
+
+			<div class="icon">
+				<label class="cd-label" for="cd-company"></label>
+				<input class="user" type="text" id="picktime" placeholder="宝宝生日">
+			</div> 
+
+			<div class="icon">
+				<label class="cd-label" for="cd-email">邮箱地址</label>
+				<input class="user" type="email" name="cd-email" id="cd-email" required>
+			</div>
+<script>
+			$(function() {
+				$('#picktime').mdatetimer(
+						{
+							mode : 3, //时间选择器模式：1：年月日，2：年月日时分（24小时），3：年月日时分（12小时），4：年月日时分秒。默认：1
+							format : 2, //时间格式化方式：1：2015年06月10日 17时30分46秒，2：2015-05-10  17:30:46。默认：2
+							/* years : [ 2000, 2010, 2011, 2012, 2013, 2014, 2015,
+									2016, 2017 ], */ //年份数组
+									
+							years : [ 2017  ],
+							nowbtn : true, //是否显示现在按钮
+							onOk : function() {
+								//alert('OK');
+							}, //点击确定时添加额外的执行函数 默认null
+							onCancel : function() {
+								/* alert(''); */
+							}, //点击取消时添加额外的执行函数 默认null
+						});
+			});
+			
+			function finish(){
+				alert("提交成功");
+			}
+		</script>
+			<div>
+
+				<ul class="cd-form-list">
+					<li>
+					<label for="cd-radio-1">宝宝性别</label>
+					</li>
+					<li>
+						<input type="radio" name="radio-button" id="cd-radio-1" checked>
+						<label for="cd-radio-1">男</label>
+					</li>
+						
+					<li>
+						<input type="radio" name="radio-button" id="cd-radio-2">
+						<label for="cd-radio-2">女</label>
+					</li>
+
+					<li>
+						<input type="radio" name="radio-button" id="cd-radio-3">
+						<label for="cd-radio-3">不限性别</label>
+					</li>
+				</ul>
+			</div>
+
+			
+			<div class="icon">
+				<label class="cd-label" for="cd-textarea">更多要求...</label>
+				<textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
+			</div>
+
+			<div>
+				<input type="submit" value="申请起名" onclick="finish()">
+			</div>
+		</fieldset>
+	</form>
+</div>
+</div>
+</center>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+</body>
+</html>
